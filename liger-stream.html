@@ -7,10 +7,15 @@
 </body>
 
 <template name="stream">
-  <h1>Hello World!</h1>
-  {{greeting}}
-  <input type="button" value="Click" />
-</template>
 
-<template name="stream-item">
+  <h1>Liger STREAM!</h1>
+  
+  <form id="new-item">
+    <input type="text" name="url">
+  </form>
+
+  {{#each items}}
+    <p>link: {{url}}</p>
+  {{/each}}
+
 </template>
