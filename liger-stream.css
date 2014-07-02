@@ -1,1 +1,23 @@
 /* CSS declarations go here */
+body {
+	width: 960px;
+	margin: 0 auto;
+}
+
+/*************************
+TYPOGRAPHY
+*************************/
+
+body {
+	font-family: helvetica;
+	font-weight: light;
+}
+
+h1 {
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+form#new-item {
+	display: none;
+}
