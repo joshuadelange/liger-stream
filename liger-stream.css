@@ -43,3 +43,8 @@ p {
 .ui.feed .label + .content {
 	padding-left: 0;
 }
+
+.ui.piled.feed.segment::before,
+.ui.piled.feed.segment::after {
+	visibility: hidden;
+}
