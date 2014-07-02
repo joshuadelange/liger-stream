@@ -8,11 +8,15 @@
 
 <template name="stream">
 
+  {{> loginButtons align="right"}}
+
   <h1>Liger STREAM!</h1>
   
-  <form id="new-item">
-    <input type="text" name="url">
-  </form>
+  {{#if currentUser}}
+    <form id="new-item">
+      <input type="text" name="url">
+    </form>
+  {{/if}}
 
   {{#each items}}
     <p>link: {{url}}</p>
