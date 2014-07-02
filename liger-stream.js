@@ -18,6 +18,9 @@ if (Meteor.isClient) {
 
     //listen for submits on the form
     'submit #new-item': function (ev, el) {
+
+      console.log('Meteor.user()', Meteor.user());
+
       //getting the $form and link
       var $form = $(ev.target),
           link = $form.find('[name="url"]').val();
@@ -30,7 +33,10 @@ if (Meteor.isClient) {
       else {
 
         //adding to db
-        Items.insert({url: link});
+        Items.insert({
+          url: link,
+          posted_by: Meteor.user().profile.name
+        });
 
         //clearing the field
         $form.find('[name="url"]').val('');
