@@ -8,41 +8,46 @@
 
 <template name="stream">
 
-
-
-
 	<h1>Liger STREAM!</h1>	
 
 	{{> loginButtons align="right"}}
 
 	{{#if currentUser}}
-	<form id="new-item">
-		<input type="text" name="url">
-	</form>
+		<form id="new-item">
+			<input type="text" name="url">
+		</form>
 	{{/if}}
-		<div class="ui piled feed segment">
-			<h2 class="ui header">
-			    The Stream of Creative Juices&trade;
-			</h2>
 
-			{{#each items}}
-				<div class="event">
-					<div class="label">
-						<i class="angle right icon"></i>
-					</div>
-					<div class="content">
-						<!-- <div class="date">
-							3 days ago
-						</div> -->
-						<div class="summary">
-							<p>{{url}}</p>
-						</div>
-						<!-- <div class="extra text">
-							I am a dog and I do not know how to make a post
-						</div> -->
-					</div>
+	<div class="ui piled feed segment">
+
+		<h2 class="ui header">
+		    The Stream of Creative Juices&trade;
+		</h2>
+
+		{{#each items}}
+
+			<div class="event">
+
+				<div class="label">
+					<i class="angle right icon"></i>
 				</div>
-			{{/each}}
-		</div>
+
+				<div class="content">
+					<!-- <div class="date">
+						3 days ago
+					</div> -->
+					<div class="summary">
+						<a href="{{url}}">{{url}}</a>
+					</div>
+					<!-- <div class="extra text">
+						I am a dog and I do not know how to make a post
+					</div> -->
+				</div>
+
+			</div>
+
+		{{/each}}
+
+	</div>
 
 </template>
