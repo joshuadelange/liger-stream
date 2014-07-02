@@ -1,6 +1,7 @@
 /* CSS declarations go here */
 body {
-	width: 960px;
+	width: 85%;
+	max-width: 960px;
 	margin: 0 auto;
 }
 
@@ -19,5 +20,26 @@ h1 {
 }
 
 form#new-item {
-	display: none;
+	/*display: none;*/
+}
+
+.label {
+	width: 0.5em;
+}
+
+div.label + div.content {
+	padding-left: 0em;
+}
+
+p {
+	margin: 0.2em;
+
+}
+
+.ui.feed .label {
+	width: 0.5em;
+}
+
+.ui.feed .label + .content {
+	padding-left: 0;
 }
