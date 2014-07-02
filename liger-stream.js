@@ -1,5 +1,5 @@
 //declare items! :D
-var Items = new Meteor.Collection('items');
+Items = new Meteor.Collection('items');
 Items.allow({
     insert: function (userId, doc) {
       return (userId);
@@ -11,7 +11,7 @@ if (Meteor.isClient) {
   //give the items to the template
   Template.stream.items = function () {
     //fetch items from DB
-    return Items.find();
+    return Items.find({}, {sort: {created_on: -1}});
   };
 
   Template.stream.events({
@@ -35,7 +35,8 @@ if (Meteor.isClient) {
         //adding to db
         Items.insert({
           url: link,
-          posted_by: Meteor.user().profile.name
+          posted_by: Meteor.user().profile.name,
+          created_on: new Date()
         });
 
         //clearing the field
