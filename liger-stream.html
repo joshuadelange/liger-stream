@@ -10,16 +10,19 @@
 
 
 
+	<header>
+		<h1 class="title">Liger STREAM!</h1>	
 
-	<h1>Liger STREAM!</h1>	
-
-	{{> loginButtons align="right"}}
+		{{> loginButtons align="right"}}
+	</header>
 
 	{{#if currentUser}}
-	<form id="new-item">
-		<input type="text" name="url">
-	</form>
+		<form id="new-item">
+			<label for="url-field">Add New URL: </label>
+			<input type="text" name="url" id="url-field">
+		</form>
 	{{/if}}
+
 		<div class="ui piled feed segment">
 			<h2 class="ui header">
 			    The Stream of Creative Juices&trade;
