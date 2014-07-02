@@ -37,9 +37,6 @@ label {
 	margin-bottom: 10px;
 }
 
-.event .label {
-	width: 0.5em;
-}
 
 #url-field {
 	display: block;
@@ -72,3 +69,18 @@ p {
 .ui.piled.feed.segment::after {
 	visibility: hidden;
 }
+
+.event .label {
+	width: 0.5em;
+}
+
+.summary a {
+	color: #555;
+
+}
+
+.postedby {
+	color: #CCC;
+	font-size: 0.8rem;
+}
+
