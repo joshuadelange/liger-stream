@@ -13,11 +13,13 @@
 
 	<h1>Liger STREAM!</h1>	
 
+	{{> loginButtons align="right"}}
+
+	{{#if currentUser}}
 	<form id="new-item">
-		<h4>Add new item</h4>
 		<input type="text" name="url">
 	</form>
-
+	{{/if}}
 		<div class="ui piled feed segment">
 			<h2 class="ui header">
 			    The Stream of Creative Juices&trade;
