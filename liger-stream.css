@@ -48,6 +48,21 @@ label {
 	font-size: 1.3rem;
 }
 
+.ui.feed .event {
+	padding: 1.75em 2em;
+}
+
+.event {
+	padding-left: 25px;
+	border-top: 1px solid #CCC;
+	border-left: 1px solid #CCC;
+	border-right: 1px solid #CCC;
+}
+
+.event:last-child {
+	border-bottom: 1px solid #CCC;
+}
+
 div.label + div.content {
 	padding-left: 0em;
 }
